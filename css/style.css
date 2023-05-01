@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: monospace, serif;
+}
+
+body {
+    background-color: #1e202b;
+}
+
+.navbar {
+    background-color: #1e202b;
+}
+
+.container {
+    width: 77%;
+}
+
+.site-title {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: white;
+}
+
+.site-description {
+    font-size: 10px;
+    display: block;
+    color: #bfc1c8;
+}
+
+.nav-link {
+    padding: 4px 25px 4px 25px !important;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 10px !important;
+    border: 2px solid #1e202b !important;
+    border-radius: 50px;
+    box-shadow: none;
+}
+
+.nav-link:hover {
+    font-size: 14px;
+    border: 2px solid #009ad8 !important;
+    border-radius: 50px;
+    color: #009ad8 !important;
+    box-shadow: none !important;
+}
+
+
+.navbar-toggler-icon {
+
+    color: #009ad8 !important;
+}
+
+.active {
+    border: 2px solid #009ad8 !important;
+    border-radius: 50px;
+    color: #009ad8 !important;
+
+}
+
+.landing {
+    margin-top: 150px;
+    background-image: url(../images/banner.png);
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.search {
+    position: relative;
+}
+
+.search .city {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    color: white;
+    padding: 18px 18px 18px 18px;
+    background: rgb(30, 32, 43);
+    border-radius: 50px;
+    border: none;
+    box-shadow: none;
+}
+
+.search .btn-city {
+    top: 78px;
+    right: 8px;
+    padding: 8px 40px;
+    position: absolute;
+    border: 2px solid #009ad8 !important;
+    background-color: #009ad8;
+    border-radius: 50px;
+    color: white !important;
+    box-shadow: none !important;
+}
+
+
+.forecast-header {
+    color: #bfc1c8;
+}
+.custom{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color:#009ad8;
+}
+.location{
+    color: #bfc1c8;
+}
+span {
+    color: #bfc1c8;
+}
+small{
+    color: #bfc1c8;
+}
+.forecast-container {
+    width: 100%;
+    background: #323544;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: -150px;
+    margin-bottom: 50px;
+}
+
+.forecast-container .forecast {
+    width: 33.33%;
+}
+
+.forecast-container .forecast:nth-child(even) {
+    background-color: #262936;
+}
+
+@media screen and (max-width: 990px) {
+    .forecast-container .forecast {
+        display: block;
+        width: 100%;
+        float: left;
+    }
+}
+
+/* .forecast-container .forecast.today {
+    width: 420px;
+  } */
+.forecast-container .forecast.today .forecast-header {
+    *zoom: 1;
+}
+
+.forecast-container .forecast.today .forecast-header:after {
+    content: " ";
+    clear: both;
+    display: block;
+    overflow: hidden;
+    height: 0;
+}
+
+.forecast-container .forecast.today .forecast-header .day {
+    float: left;
+}
+
+.forecast-container .forecast.today .forecast-header .date {
+    float: right;
+}
+
+.forecast-container .forecast.today .forecast-content {
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.forecast-container .forecast.today .location {
+    font-size: 18px;
+    font-size: 1.2857142857em;
+    font-weight: 400;
+}
+
+.forecast-container .forecast.today .degree .num,
+.forecast-container .forecast.today .degree .forecast-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.forecast-container .forecast.today .degree .num {
+    font-size: 90px;
+    font-size: 6.4285714286rem;
+    margin-right: 30px;
+}
+
+.forecast-container .forecast.today span {
+    margin-right: 20px;
+}
+
+.forecast-container .forecast.today span img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 990px) {
+    .forecast-container .forecast.today {
+        display: block;
+        width: 100%;
+    }
+}
+
+.forecast-container .forecast .forecast-header {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.forecast-container .forecast .forecast-icon {
+    height: 50px;
+}
+
+.forecast-container .forecast .forecast-content {
+    padding: 50px 20px 10px;
+    text-align: center;
+}
+
+.forecast-container .forecast .forecast-content .forecast-icon {
+    margin-bottom: 20px;
+}
+
+.forecast-container .forecast .forecast-content .degree {
+    font-size: 24px;
+    font-size: 1.7142857143em;
+    color: white;
+    font-weight: 700;
+}
+
+.forecast-container .forecast .forecast-content small {
+    font-size: 16px;
+    font-size: 1.1428571429em;
+}
+
+/* .forecast-container  {
+    border-color: rgba(0, 0, 0, 0);
+    position: relative;
+    bottom: 200px;
+}
+
+.forecast-content{
+    background-color: #323544;
+}
+.forecast:last-child{
+    background-color: #009ad8 ;
+
+}
+
+.today-cur {
+    background-color: #2d303d;
+}
+
+.num{
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.forecast-icon{
+    margin-top: 1rem;
+}
+.custom{
+    color: #009ad8;
+}
+.nex-day{
+    background-color: #222531;
+}
+.forecast-contentNextDay{
+    background-color: #262936;
+} */
+
+
+
+
+footer {
+    background-color: #262936;
+    padding: 45px 0;
+}
+
+.subscribe-form {
+    position: relative;
+    margin-bottom: 30px;
+
+}
+
+.subscribe-form .in-Ea {
+    margin-top: 5px;
+    width: 100%;
+    color: white;
+    padding: 18px 18px 18px 18px;
+    background: rgb(30, 32, 43);
+    border-radius: 50px;
+    border: none;
+    box-shadow: none;
+}
+
+.subscribe-form .btn-S {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    padding: 8px 15px;
+    position: absolute;
+    border: 2px solid #009ad8 !important;
+    background-color: #009ad8;
+    border-radius: 50px;
+    color: white !important;
+}
+
+.colophon {
+    color: #bfc1c8;
+}
+
+
+
+footer .social-links .icon-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    background: rgb(30, 32, 43);
+    transition: all 0.3s ease 0s;
+    color: #009ad8 !important;
+    cursor: pointer;
+}
+
+
+footer .social-links .icon-c:hover {
+    background: #009ad8;
+    color: white !important;
+}
